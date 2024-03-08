@@ -20,7 +20,7 @@ io.on('connection', (socket) => {
   socket.emit('messages', messages);
 
   // Handle chat message from client
-  socket.on('chat message', (msg) => {
+  socket.on('message', (msg) => {
     messages.push(msg);
     io.emit('chat message', msg); // Broadcast to all clients
   });
